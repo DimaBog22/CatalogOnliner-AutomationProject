@@ -1,6 +1,8 @@
 import PageObject.OnlinerCatalog.HomePage;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 import static PageObject.OnlinerCatalog.HomePageCatalogLinkEnum.*;
+import static driver.DriverCreation.quitDriver;
 
 public class FirstTest {
 
@@ -29,6 +31,11 @@ public class FirstTest {
                 .verifyHomePage()
                 .clickLink(APPLIANCES);
 
+    }
+
+    @AfterMethod
+    public void closePages() {
+        quitDriver();
     }
 
 }
