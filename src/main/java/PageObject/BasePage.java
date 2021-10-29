@@ -1,5 +1,6 @@
 package PageObject;
 
+import driver.BaseTest;
 import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.By;
 import org.testng.Assert;
@@ -7,7 +8,7 @@ import java.util.Locale;
 import static driver.DriverCreation.getDriver;
 @Log4j2
 
-public class BasePage {
+public class BasePage extends BaseTest {
 
     protected void open(String url) {
         log.info(url + " is opened");
