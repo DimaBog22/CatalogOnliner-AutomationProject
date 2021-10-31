@@ -3,22 +3,22 @@ package PageObject.OnlinerCatalog.PhonesAndAccessoriesPages;
 import PageObject.OnlinerCatalog.BasePage;
 import org.openqa.selenium.By;
 
-public class HeadphonesPage extends BasePage {
+public class SmartWatchesPage extends BasePage {
 
-    private By headphonesPageTitle = By.xpath("//h1[contains(text(), 'Наушники и гарнитуры')]");
+    private By smartWatchesPageTitle = By.xpath("//h1[contains(text(), 'Умные часы и браслеты')]");
     private By catalogTab = By.xpath("//span[contains(text(), 'Каталог') and @class='schema-filter-control__switcher-inner']");
     private By adsTab = By.xpath("//span[contains(text(), 'Объявления') and @class='schema-filter-control__switcher-inner']");
 
-    public HeadphonesPage verifyPage() {
+    public SmartWatchesPage verifyPage() {
 
-        isDisplayed(headphonesPageTitle, catalogTab, adsTab);
+        isDisplayed(smartWatchesPageTitle, catalogTab, adsTab);
         return this;
 
     }
 
-    public HeadphonesPage checkTitle() {
+    public SmartWatchesPage checkTitle() {
 
-        checkTitle(headphonesPageTitle, "Наушники и гарнитуры");
+        checkTitle(smartWatchesPageTitle, "Умные часы и браслеты");
         return this;
 
     }
