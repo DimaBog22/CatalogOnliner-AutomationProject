@@ -1,4 +1,4 @@
-package PageObject;
+package PageObject.OnlinerCatalog;
 
 import driver.BaseTest;
 import lombok.extern.log4j.Log4j2;
@@ -44,7 +44,10 @@ public class BasePage extends BaseTest {
     }
 
     protected Integer getElementsCount(By element) {
+
+        log.info(getDriver().findElements(element).size());
         return getDriver().findElements(element).size();
+
     }
 
     protected Boolean isElementPresented(By element){

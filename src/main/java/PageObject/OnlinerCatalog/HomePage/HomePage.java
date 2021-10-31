@@ -1,6 +1,10 @@
-package PageObject.OnlinerCatalog;
+package PageObject.OnlinerCatalog.HomePage;
 
-import PageObject.BasePage;
+import PageObject.OnlinerCatalog.BasePage;
+import PageObject.OnlinerCatalog.HomePage.NavigationMenuEnums.Brands.HomePageBrandsLinkEnum;
+import PageObject.OnlinerCatalog.HomePage.NavigationMenuEnums.Catalog.Electronics.ElectronicsLinkEnum;
+import PageObject.OnlinerCatalog.HomePage.NavigationMenuEnums.Catalog.Electronics.PhonesAndAccessories.PhonesAndAccessoriesLinkEnum;
+import PageObject.OnlinerCatalog.HomePage.NavigationMenuEnums.Catalog.HomePageCatalogLinkEnum;
 import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.By;
 import org.testng.Assert;
@@ -12,8 +16,6 @@ public class HomePage extends BasePage {
     private By catalogTitle = By.xpath("//h1[text()='Каталог']");
     private By onlinerLogo = By.className("onliner_logo");
     private By inputSearch = By.name("query");
-
-
 
     public HomePage openPage() {
 
@@ -69,6 +71,17 @@ public class HomePage extends BasePage {
     public HomePage clickLink(ElectronicsLinkEnum electronicsLinkEnum) {
 
         click(getLink(electronicsLinkEnum));
+        return this;
+
+    }
+
+    private By getLink(PhonesAndAccessoriesLinkEnum phonesAndAccessoriesLinkEnum) {
+        return By.xpath(phonesAndAccessoriesLinkEnum.getLinkText());
+    }
+
+    public HomePage clickLink(PhonesAndAccessoriesLinkEnum phonesAndAccessoriesLinkEnum) {
+
+        click(getLink(phonesAndAccessoriesLinkEnum));
         return this;
 
     }

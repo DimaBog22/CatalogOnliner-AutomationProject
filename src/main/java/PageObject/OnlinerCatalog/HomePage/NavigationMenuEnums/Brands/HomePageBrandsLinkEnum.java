@@ -1,4 +1,4 @@
-package PageObject.OnlinerCatalog;
+package PageObject.OnlinerCatalog.HomePage.NavigationMenuEnums.Brands;
 
 public enum HomePageBrandsLinkEnum {
 
