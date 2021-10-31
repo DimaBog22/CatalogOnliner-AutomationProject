@@ -51,6 +51,28 @@ public class HomePage extends BasePage {
 
     }
 
+    private By getLink(HomePageBrandsLinkEnum homePageBrandsLinkEnum) {
+        return By.cssSelector(homePageBrandsLinkEnum.getLinkText());
+    }
+
+    public HomePage clickLink(HomePageBrandsLinkEnum homePageBrandsLinkEnum) {
+
+        click(getLink(homePageBrandsLinkEnum));
+        return this;
+
+    }
+
+    private By getLink(ElectronicsLinkEnum electronicsLinkEnum) {
+        return By.xpath(electronicsLinkEnum.getLinkText());
+    }
+
+    public HomePage clickLink(ElectronicsLinkEnum electronicsLinkEnum) {
+
+        click(getLink(electronicsLinkEnum));
+        return this;
+
+    }
+
     public HomePage clickOnlinerLogo() {
 
         click(onlinerLogo);
