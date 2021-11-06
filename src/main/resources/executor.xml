@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="CatalogOnlinerTests">
-    <test name="Open links">
+<suite name="OnlinerTests" parallel="tests" thread-count="3">
+    <test name="Login verifications">
         <classes>
             <class name="LoginTests"/>
+        </classes>
+    </test>
+    <test name="Menu items are clickable verifications">
+        <classes>
+            <class name="MenuItemsAreClickableTests"/>
+        </classes>
+    </test>
+    <test name="Verification of PhonesAndAccessories Pages">
+        <classes>
+            <class name="VerificationOfPhonesAndAccessoriesPagesTests"/>
         </classes>
     </test>
 </suite>
