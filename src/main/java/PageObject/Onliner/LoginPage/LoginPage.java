@@ -10,7 +10,7 @@ public class LoginPage extends BasePage {
     private By loginBtn = By.cssSelector("[type='submit'].auth-button");
     private By registrationBtn = By.cssSelector("[href='https://profile.onliner.by/registration']");
     private By forgotPasswordBtn = By.cssSelector("[href='https://profile.onliner.by/recover-password']");
-    private By onlinerLogoBtn = By.cssSelector("[href='https://www.onliner.by/']");
+    private By homePageBtn = By.cssSelector(".auth-form__image.auth-form__image_logo");
     private By loginIsAbsentError = By.xpath("//div[contains(text(),'Укажите ник или e-mail')]");
     private By passwordIsAbsentError = By.xpath("//div[contains(text(),'Укажите пароль')]");
     private By incorrectLoginOrPasswordError = By.xpath("//div[contains(text(),'Неверный логин или пароль')]");
@@ -19,6 +19,13 @@ public class LoginPage extends BasePage {
 
         isDisplayed(emailInput, passwordInput, loginBtn,
                 registrationBtn, forgotPasswordBtn);
+        return this;
+
+    }
+
+    public LoginPage goToTheHomePage() {
+
+        click(homePageBtn);
         return this;
 
     }
@@ -33,13 +40,6 @@ public class LoginPage extends BasePage {
     public LoginPage goToRecoverPasswordPage() {
 
         click(forgotPasswordBtn);
-        return this;
-
-    }
-
-    public LoginPage goToOnlinerHomePage() {
-
-        click(onlinerLogoBtn);
         return this;
 
     }

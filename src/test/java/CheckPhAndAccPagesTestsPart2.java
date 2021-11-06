@@ -1,5 +1,6 @@
 import PageObject.Onliner.CatalogPage.HomePage.HomePage;
 import PageObject.Onliner.CatalogPage.PhonesAndAccessoriesPages.*;
+import PageObject.Onliner.CatalogPage.PhonesAndAccessoriesPages.MobilePhonesPage.MobilePhonesPage;
 import driver.BaseTest;
 import org.testng.annotations.Test;
 import static PageObject.Onliner.CatalogPage.HomePage.NavigationMenuEnums.Catalog.Electronics.ElectronicsLinkEnum.PHONES_AND_ACCESSORIES;
