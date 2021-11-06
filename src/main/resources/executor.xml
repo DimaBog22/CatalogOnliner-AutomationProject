@@ -3,7 +3,7 @@
 <suite name="CatalogOnlinerTests">
     <test name="Open links">
         <classes>
-            <class name="HomePageTests"/>
+            <class name="LoginTests"/>
         </classes>
     </test>
 </suite>

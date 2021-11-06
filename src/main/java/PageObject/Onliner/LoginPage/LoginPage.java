@@ -11,12 +11,14 @@ public class LoginPage extends BasePage {
     private By registrationBtn = By.cssSelector("[href='https://profile.onliner.by/registration']");
     private By forgotPasswordBtn = By.cssSelector("[href='https://profile.onliner.by/recover-password']");
     private By onlinerLogoBtn = By.cssSelector("[href='https://www.onliner.by/']");
+    private By loginIsAbsentError = By.xpath("//div[contains(text(),'Укажите ник или e-mail')]");
+    private By passwordIsAbsentError = By.xpath("//div[contains(text(),'Укажите пароль')]");
+    private By incorrectLoginOrPasswordError = By.xpath("//div[contains(text(),'Неверный логин или пароль')]");
 
-
-    public LoginPage verifyHomePage() {
+    public LoginPage verifyLoginPage() {
 
         isDisplayed(emailInput, passwordInput, loginBtn,
-                registrationBtn, forgotPasswordBtn, onlinerLogoBtn);
+                registrationBtn, forgotPasswordBtn);
         return this;
 
     }
@@ -47,6 +49,27 @@ public class LoginPage extends BasePage {
         enter(emailInput, login);
         enter(passwordInput, password);
         click(loginBtn);
+        return this;
+
+    }
+
+    public LoginPage verifyLoginIsAbsentError() {
+
+        isDisplayed(loginIsAbsentError);
+        return this;
+
+    }
+
+    public LoginPage verifyPasswordIsAbsentError() {
+
+        isDisplayed(passwordIsAbsentError);
+        return this;
+
+    }
+
+    public LoginPage verifyIncorrectLoginOrPasswordError() {
+
+        isDisplayed(incorrectLoginOrPasswordError);
         return this;
 
     }
