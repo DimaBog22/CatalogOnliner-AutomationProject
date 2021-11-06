@@ -1,4 +1,4 @@
-package PageObject.OnlinerCatalog.HomePage.NavigationMenuEnums.Catalog;
+package PageObject.Onliner.CatalogPage.HomePage.NavigationMenuEnums.Catalog;
 
 public enum HomePageCatalogLinkEnum {
 

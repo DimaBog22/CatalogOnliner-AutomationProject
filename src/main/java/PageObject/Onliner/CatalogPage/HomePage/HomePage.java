@@ -1,10 +1,10 @@
-package PageObject.OnlinerCatalog.HomePage;
+package PageObject.Onliner.CatalogPage.HomePage;
 
-import PageObject.OnlinerCatalog.BasePage;
-import PageObject.OnlinerCatalog.HomePage.NavigationMenuEnums.Brands.HomePageBrandsLinkEnum;
-import PageObject.OnlinerCatalog.HomePage.NavigationMenuEnums.Catalog.Electronics.ElectronicsLinkEnum;
-import PageObject.OnlinerCatalog.HomePage.NavigationMenuEnums.Catalog.Electronics.PhonesAndAccessories.PhonesAndAccessoriesLinkEnum;
-import PageObject.OnlinerCatalog.HomePage.NavigationMenuEnums.Catalog.HomePageCatalogLinkEnum;
+import PageObject.Onliner.BasePage;
+import PageObject.Onliner.CatalogPage.HomePage.NavigationMenuEnums.Brands.HomePageBrandsLinkEnum;
+import PageObject.Onliner.CatalogPage.HomePage.NavigationMenuEnums.Catalog.Electronics.ElectronicsLinkEnum;
+import PageObject.Onliner.CatalogPage.HomePage.NavigationMenuEnums.Catalog.Electronics.PhonesAndAccessories.PhonesAndAccessoriesLinkEnum;
+import PageObject.Onliner.CatalogPage.HomePage.NavigationMenuEnums.Catalog.HomePageCatalogLinkEnum;
 import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.By;
 import org.testng.Assert;
@@ -16,10 +16,18 @@ public class HomePage extends BasePage {
     private By catalogTitle = By.xpath("//h1[text()='Каталог']");
     private By onlinerLogo = By.className("onliner_logo");
     private By inputSearch = By.name("query");
+    private By goToLoginPageBtn = By.cssSelector(".auth-bar__item.auth-bar__item--text");
 
     public HomePage openPage() {
 
         open("https://catalog.onliner.by/");
+        return this;
+
+    }
+
+    public HomePage goToLoginPage() {
+
+        click(goToLoginPageBtn);
         return this;
 
     }

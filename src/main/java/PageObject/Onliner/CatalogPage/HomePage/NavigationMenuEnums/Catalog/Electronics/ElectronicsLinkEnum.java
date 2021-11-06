@@ -1,4 +1,4 @@
-package PageObject.OnlinerCatalog.HomePage.NavigationMenuEnums.Catalog.Electronics;
+package PageObject.Onliner.CatalogPage.HomePage.NavigationMenuEnums.Catalog.Electronics;
 
 public enum ElectronicsLinkEnum {
 

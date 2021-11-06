@@ -1,4 +1,4 @@
-package PageObject.OnlinerCatalog;
+package PageObject.Onliner;
 
 import driver.BaseTest;
 import lombok.extern.log4j.Log4j2;

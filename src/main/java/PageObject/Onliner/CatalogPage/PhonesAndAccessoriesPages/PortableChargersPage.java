@@ -1,6 +1,6 @@
-package PageObject.OnlinerCatalog.PhonesAndAccessoriesPages;
+package PageObject.Onliner.CatalogPage.PhonesAndAccessoriesPages;
 
-import PageObject.OnlinerCatalog.BasePage;
+import PageObject.Onliner.BasePage;
 import org.openqa.selenium.By;
 
 public class PortableChargersPage extends BasePage {

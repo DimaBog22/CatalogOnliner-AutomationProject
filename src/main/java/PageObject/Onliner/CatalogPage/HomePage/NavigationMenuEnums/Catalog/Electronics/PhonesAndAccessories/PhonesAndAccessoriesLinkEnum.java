@@ -1,4 +1,4 @@
-package PageObject.OnlinerCatalog.HomePage.NavigationMenuEnums.Catalog.Electronics.PhonesAndAccessories;
+package PageObject.Onliner.CatalogPage.HomePage.NavigationMenuEnums.Catalog.Electronics.PhonesAndAccessories;
 
 public enum PhonesAndAccessoriesLinkEnum {
 
