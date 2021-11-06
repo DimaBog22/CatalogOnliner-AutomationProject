@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="OnlinerTests" parallel="tests" thread-count="5">
-    <test name="Login verifications" enabled="false">
+    <test name="Login verifications">
         <classes>
-            <class name="LoginTests"/>
+            <class name="FailedLoginTests"/>
         </classes>
     </test>
-    <test name="Menu items are clickable verifications" enabled="false">
+    <test name="Menu items are clickable verifications">
         <classes>
             <class name="MenuItemsAreClickableTests"/>
         </classes>
     </test>
-    <test name="Verification of PhonesAndAccessories Pages part 1" enabled="false">
+    <test name="Verification of PhonesAndAccessories Pages part 1">
         <classes>
             <class name="CheckPhAndAccPagesTestsPart1"/>
         </classes>
     </test>
-    <test name="Verification of PhonesAndAccessories Pages part 2" enabled="false">
+    <test name="Verification of PhonesAndAccessories Pages part 2">
         <classes>
             <class name="CheckPhAndAccPagesTestsPart2"/>
         </classes>
     </test>
-    <test name="Add item to the card via menus" enabled="true">
+    <test name="Add item to the card via menus">
         <classes>
             <class name="AddItemViaMenusTest"/>
         </classes>

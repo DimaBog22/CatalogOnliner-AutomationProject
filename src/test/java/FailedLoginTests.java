@@ -3,23 +3,12 @@ import PageObject.Onliner.LoginPage.LoginPage;
 import driver.BaseTest;
 import org.testng.annotations.Test;
 
-public class LoginTests extends BaseTest {
+public class FailedLoginTests extends BaseTest {
 
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
 
-    @Test(priority = 6)
-    public void successfulLogin() {
-
-        homePage.openPage()
-                .goToLoginPage();
-
-        loginPage.verifyLoginPage()
-                .loginIntoApplication("qa07qa@mail.ru",
-                                      "qa07qa07");
-
-    }
-    @Test(priority = 1)
+    @Test
     public void loginIsAbsent() {
 
         homePage.openPage()
@@ -31,7 +20,7 @@ public class LoginTests extends BaseTest {
                 .verifyLoginIsAbsentError();
 
     }
-    @Test(priority = 2)
+    @Test
     public void passwordIsAbsent() {
 
         homePage.openPage()
@@ -43,7 +32,7 @@ public class LoginTests extends BaseTest {
                 .verifyPasswordIsAbsentError();
 
     }
-    @Test(priority = 3)
+    @Test
     public void passwordIsIncorrect() {
 
         homePage.openPage()
@@ -55,7 +44,7 @@ public class LoginTests extends BaseTest {
                 .verifyIncorrectLoginOrPasswordError();
 
     }
-    @Test(priority = 4)
+    @Test
     public void loginIsIncorrect() {
 
         homePage.openPage()
@@ -67,7 +56,7 @@ public class LoginTests extends BaseTest {
                 .verifyIncorrectLoginOrPasswordError();
 
     }
-    @Test(priority = 5)
+    @Test
     public void loginAndPasswordAreIncorrect() {
 
         homePage.openPage()
