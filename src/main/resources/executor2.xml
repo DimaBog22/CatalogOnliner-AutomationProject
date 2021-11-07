@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="OnlinerTests part2" parallel="tests" thread-count="2">
+    <test name="Add/remove item to/from the card via menus">
+        <classes>
+            <class name="AddAndRemoveItemViaMenusTests"/>
+        </classes>
+    </test>
+    <test name="Add/remove item to/from the card via search input">
+        <classes>
+            <class name="AddAndRemoveItemViaSearchInputTests"/>
+        </classes>
+    </test>
+</suite>

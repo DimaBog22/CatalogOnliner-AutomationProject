@@ -1,3 +1,4 @@
+import PageObject.Onliner.CardPage.CardPage;
 import PageObject.Onliner.CatalogPage.HomePage.HomePage;
 import PageObject.Onliner.CatalogPage.PhonesAndAccessoriesPages.MobilePhonesPage.Iphone11GB64;
 import PageObject.Onliner.CatalogPage.PhonesAndAccessoriesPages.MobilePhonesPage.MobilePhonesPage;
@@ -9,23 +10,24 @@ import static PageObject.Onliner.CatalogPage.HomePage.NavigationMenuEnums.Catalo
 import static PageObject.Onliner.CatalogPage.HomePage.NavigationMenuEnums.Catalog.Electronics.PhonesAndAccessories.PhonesAndAccessoriesLinkEnum.MOBILE_PHONES;
 import static PageObject.Onliner.CatalogPage.HomePage.NavigationMenuEnums.Catalog.HomePageCatalogLinkEnum.ELECTRONICS;
 
-public class AddItemViaMenusTest extends BaseTest {
+public class AddAndRemoveItemViaMenusTests extends BaseTest {
 
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
     MobilePhonesPage mobilePhonesPage = new MobilePhonesPage();
     Iphone11GB64 iphone11GB64 = new Iphone11GB64();
     Header header = new Header();
+    CardPage cardPage = new CardPage();
 
-    @Test
+    @Test(priority = 1)
     public void addItemToTheCard() throws InterruptedException {
 
         homePage.openPage()
                 .goToLoginPage();
 
         loginPage.verifyLoginPage()
-                 .loginIntoApplication("qa07qa@mail.ru",
-                                       "qa07qa07");
+                 .loginIntoApplication("valdemarius000007@gmail.com",
+                "Valdi4Paldi4_221");
 
         Thread.sleep(5000); // to avoid StaleElementReferenceException
 
@@ -42,12 +44,25 @@ public class AddItemViaMenusTest extends BaseTest {
                     .checkTitle()
                     .addToTheCard();
 
-        header.checkBadgeHasOneItemInside();
+        header.checkBadgeHasOneItemInside()
+              .goToTheCard();
 
-        // ДОПИСАТЬ ПРОВЕРКУ САМОЙ КОРЗИНЫ ВНУТРИ
-        // СОЗДАТЬ ПЕЙДЖУ НА КОРЗИНУ
+        cardPage.verifyCardPage()
+                .checkNameOfItem()
+                .checkShopName();
 
+    }
+    @Test(priority = 2)
+    public void removeItemFromTheCard() {
 
+        homePage.openPage();
+
+        header.goToTheCard();
+
+        cardPage.verifyCardPage()
+                .checkNameOfItem()
+                .checkShopName()
+                .removeItemFromCard();
 
     }
 

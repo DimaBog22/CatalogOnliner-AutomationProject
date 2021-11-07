@@ -3,12 +3,25 @@ import PageObject.Onliner.LoginPage.LoginPage;
 import driver.BaseTest;
 import org.testng.annotations.Test;
 
-public class FailedLoginTests extends BaseTest {
+public class LoginTests extends BaseTest {
 
     HomePage homePage = new HomePage();
     LoginPage loginPage = new LoginPage();
 
-    @Test
+    @Test(priority = 6)
+    public void successfulLogin() {
+
+        homePage.openPage()
+                .goToLoginPage();
+
+        loginPage.verifyLoginPage()
+                .loginIntoApplication("valdemarius000007@gmail.com",
+                        "Valdi4Paldi4_221");
+
+        homePage.verifyHomePage();
+
+    }
+    @Test(priority = 1)
     public void loginIsAbsent() {
 
         homePage.openPage()
@@ -16,35 +29,35 @@ public class FailedLoginTests extends BaseTest {
 
         loginPage.verifyLoginPage()
                 .loginIntoApplication("",
-                        "qa07qa07")
+                        "Valdi4Paldi4_221")
                 .verifyLoginIsAbsentError();
 
     }
-    @Test
+    @Test(priority = 2)
     public void passwordIsAbsent() {
 
         homePage.openPage()
                 .goToLoginPage();
 
         loginPage.verifyLoginPage()
-                .loginIntoApplication("qa07qa@mail.ru",
+                .loginIntoApplication("valdemarius000007@gmail.com",
                         "")
                 .verifyPasswordIsAbsentError();
 
     }
-    @Test
+    @Test(priority = 3)
     public void passwordIsIncorrect() {
 
         homePage.openPage()
                 .goToLoginPage();
 
         loginPage.verifyLoginPage()
-                .loginIntoApplication("qa07qa@mail.ru",
+                .loginIntoApplication("valdemarius000007@gmail.com",
                         "123")
                 .verifyIncorrectLoginOrPasswordError();
 
     }
-    @Test
+    @Test(priority = 4)
     public void loginIsIncorrect() {
 
         homePage.openPage()
@@ -52,11 +65,11 @@ public class FailedLoginTests extends BaseTest {
 
         loginPage.verifyLoginPage()
                 .loginIntoApplication("123",
-                        "qa07qa07")
+                        "Valdi4Paldi4_221")
                 .verifyIncorrectLoginOrPasswordError();
 
     }
-    @Test
+    @Test(priority = 5)
     public void loginAndPasswordAreIncorrect() {
 
         homePage.openPage()

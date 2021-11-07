@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="OnlinerTests" parallel="tests" thread-count="5">
+<suite name="OnlinerTests part1" parallel="tests" thread-count="4">
     <test name="Login verifications">
         <classes>
-            <class name="FailedLoginTests"/>
+            <class name="LoginTests"/>
         </classes>
     </test>
     <test name="Menu items are clickable verifications">
@@ -19,11 +19,6 @@
     <test name="Verification of PhonesAndAccessories Pages part 2">
         <classes>
             <class name="CheckPhAndAccPagesTestsPart2"/>
-        </classes>
-    </test>
-    <test name="Add item to the card via menus">
-        <classes>
-            <class name="AddItemViaMenusTest"/>
         </classes>
     </test>
 </suite>
