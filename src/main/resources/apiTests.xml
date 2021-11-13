@@ -3,7 +3,7 @@
 <suite name="Onliner Api tests">
     <test name="Login verifications">
         <classes>
-            <class name="RestAssuredTests"/>
+            <class name="ApiTests.RestAssuredTests"/>
         </classes>
     </test>
 </suite>
