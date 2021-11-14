@@ -1,7 +1,6 @@
 import PageObject.Onliner.CardPage.CardPage;
 import PageObject.Onliner.CatalogPage.HomePage.HomePage;
 import PageObject.Onliner.CatalogPage.PhonesAndAccessoriesPages.MobilePhonesPage.Iphone11GB64;
-import PageObject.Onliner.CatalogPage.PhonesAndAccessoriesPages.MobilePhonesPage.MobilePhonesPage;
 import PageObject.Onliner.Header;
 import PageObject.Onliner.LoginPage.LoginPage;
 import driver.BaseTest;
@@ -19,7 +18,7 @@ public class AddAndRemoveItemViaSearchInputTests extends BaseTest {
     public void addItemToTheCard() throws InterruptedException {
 
         homePage.openPage()
-                .goToLoginPage();
+                .checkUserIsLoggedIn();
 
         loginPage.verifyLoginPage()
                 .loginIntoApplication("valdemarius000007@gmail.com",

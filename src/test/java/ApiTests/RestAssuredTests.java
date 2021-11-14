@@ -118,12 +118,14 @@ public class RestAssuredTests {
         String endpoint = "/sdapi/user.api/logout";
         String requestBody = readFileAsString("getToken");
 
-        Response response = given().header("Content-Type", "application/json")
+        Response response = given().header("Authorization", "Bearer " + token)
+                .and().contentType("application/json")
                 .and().body(requestBody)
                 .and().post(endpoint);
 
-        Assert.assertEquals(response.statusCode(), 200);
-        log.info("User is deleted");
+        JsonObject jsonObject = gson.fromJson(response.asPrettyString(), JsonObject.class);
+        Assert.assertEquals(jsonObject.get("message"), "Bad Credentials");
+        Assert.assertEquals(response.statusCode(), 401);
 
     }
     @Test(priority = 4)

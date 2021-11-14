@@ -17,6 +17,8 @@ public class HomePage extends BasePage {
     private By onlinerLogo = By.className("onliner_logo");
     private By inputSearch = By.name("query");
     private By goToLoginPageBtn = By.cssSelector(".auth-bar__item.auth-bar__item--text");
+    private By userAvatar = By.cssSelector(".b-top-profile__image.js-header-user-avatar");
+    private By userId = By.cssSelector(".b-top-profile__name>a");
 
     public HomePage openPage() {
 
@@ -25,9 +27,18 @@ public class HomePage extends BasePage {
 
     }
 
-    public HomePage goToLoginPage() {
+    public HomePage checkUserIsLoggedIn() {
 
         click(goToLoginPageBtn);
+        Assert.assertEquals(getElementText(userId), "3380896");
+        return this;
+
+    }
+
+    public HomePage goToUserProfilePage() {
+
+        click(userAvatar);
+        click(userId);
         return this;
 
     }

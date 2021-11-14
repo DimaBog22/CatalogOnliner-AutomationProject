@@ -9,23 +9,27 @@ public class LoginTests extends BaseTest {
     LoginPage loginPage = new LoginPage();
 
     @Test(priority = 6)
-    public void successfulLogin() {
+    public void successfulLogin() throws InterruptedException {
 
         homePage.openPage()
-                .goToLoginPage();
+                .checkUserIsLoggedIn();
 
         loginPage.verifyLoginPage()
                 .loginIntoApplication("valdemarius000007@gmail.com",
                         "Valdi4Paldi4_221");
 
-        homePage.verifyHomePage();
+        Thread.sleep(5000);
+
+        homePage.openPage()
+                .goToUserProfilePage()
+                .checkUserIsLoggedIn();
 
     }
     @Test(priority = 1)
     public void loginIsAbsent() {
 
         homePage.openPage()
-                .goToLoginPage();
+                .checkUserIsLoggedIn();
 
         loginPage.verifyLoginPage()
                 .loginIntoApplication("",
@@ -37,7 +41,7 @@ public class LoginTests extends BaseTest {
     public void passwordIsAbsent() {
 
         homePage.openPage()
-                .goToLoginPage();
+                .checkUserIsLoggedIn();
 
         loginPage.verifyLoginPage()
                 .loginIntoApplication("valdemarius000007@gmail.com",
@@ -49,7 +53,7 @@ public class LoginTests extends BaseTest {
     public void passwordIsIncorrect() {
 
         homePage.openPage()
-                .goToLoginPage();
+                .checkUserIsLoggedIn();
 
         loginPage.verifyLoginPage()
                 .loginIntoApplication("valdemarius000007@gmail.com",
@@ -61,7 +65,7 @@ public class LoginTests extends BaseTest {
     public void loginIsIncorrect() {
 
         homePage.openPage()
-                .goToLoginPage();
+                .checkUserIsLoggedIn();
 
         loginPage.verifyLoginPage()
                 .loginIntoApplication("123",
@@ -73,7 +77,7 @@ public class LoginTests extends BaseTest {
     public void loginAndPasswordAreIncorrect() {
 
         homePage.openPage()
-                .goToLoginPage();
+                .checkUserIsLoggedIn();
 
         loginPage.verifyLoginPage()
                 .loginIntoApplication("123",
