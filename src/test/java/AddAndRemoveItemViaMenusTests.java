@@ -66,5 +66,4 @@ public class AddAndRemoveItemViaMenusTests extends BaseTest {
 
     }
 
-
 }

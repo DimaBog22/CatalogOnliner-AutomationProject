@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Onliner add/remove item to/from card tests">
-    <test name="Add/remove item to/from the card via menus">
+    <test name="Add/remove item to/from the card via search input">
         <classes>
-            <class name="AddAndRemoveItemViaMenusTests"/>
+            <class name="AddAndRemoveItemViaSearchInputTests"/>
         </classes>
     </test>
 </suite>
