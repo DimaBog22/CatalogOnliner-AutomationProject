@@ -26,7 +26,7 @@ git clone https://github.com/DimaBog22/CatalogOnliner-AutomationProject.git
   ```
 Driver implementation
 -----------------------------------
-###Driver is implemented in src/main/java/driver, Listener - src/main/java/testNG/
+### Driver is implemented in src/main/java/driver, Listener - src/main/java/testNG/
 * BaseTest contains methods setupDriver() and closeDriver(), also BaseTest is connected with Listener
 * Listener contains a method for taking screenshots on failed results and a method for allure results
 * DriverCreation contains methods getDriver() and quitDriver(), also there is ThreadLocal<WebDriver> driver what help use parallel execution of tests
