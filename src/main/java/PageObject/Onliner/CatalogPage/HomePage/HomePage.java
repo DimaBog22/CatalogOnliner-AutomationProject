@@ -27,6 +27,13 @@ public class HomePage extends BasePage {
 
     }
 
+    public HomePage goToLoginPage() {
+
+        click(goToLoginPageBtn);
+        return this;
+
+    }
+
     public HomePage checkUserIsLoggedIn() {
 
         click(goToLoginPageBtn);

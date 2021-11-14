@@ -12,7 +12,7 @@ public class LoginTests extends BaseTest {
     public void successfulLogin() throws InterruptedException {
 
         homePage.openPage()
-                .checkUserIsLoggedIn();
+                .goToLoginPage();
 
         loginPage.verifyLoginPage()
                 .loginIntoApplication("valdemarius000007@gmail.com",
@@ -29,7 +29,7 @@ public class LoginTests extends BaseTest {
     public void loginIsAbsent() {
 
         homePage.openPage()
-                .checkUserIsLoggedIn();
+                .goToLoginPage();
 
         loginPage.verifyLoginPage()
                 .loginIntoApplication("",
@@ -41,7 +41,7 @@ public class LoginTests extends BaseTest {
     public void passwordIsAbsent() {
 
         homePage.openPage()
-                .checkUserIsLoggedIn();
+                .goToLoginPage();
 
         loginPage.verifyLoginPage()
                 .loginIntoApplication("valdemarius000007@gmail.com",
@@ -53,7 +53,7 @@ public class LoginTests extends BaseTest {
     public void passwordIsIncorrect() {
 
         homePage.openPage()
-                .checkUserIsLoggedIn();
+                .goToLoginPage();
 
         loginPage.verifyLoginPage()
                 .loginIntoApplication("valdemarius000007@gmail.com",
@@ -65,7 +65,7 @@ public class LoginTests extends BaseTest {
     public void loginIsIncorrect() {
 
         homePage.openPage()
-                .checkUserIsLoggedIn();
+                .goToLoginPage();
 
         loginPage.verifyLoginPage()
                 .loginIntoApplication("123",
@@ -77,7 +77,7 @@ public class LoginTests extends BaseTest {
     public void loginAndPasswordAreIncorrect() {
 
         homePage.openPage()
-                .checkUserIsLoggedIn();
+                .goToLoginPage();
 
         loginPage.verifyLoginPage()
                 .loginIntoApplication("123",

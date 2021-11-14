@@ -23,7 +23,7 @@ public class AddAndRemoveItemViaMenusTests extends BaseTest {
     public void addItemToTheCard() throws InterruptedException {
 
         homePage.openPage()
-                .checkUserIsLoggedIn();
+                .goToLoginPage();
 
         loginPage.verifyLoginPage()
                  .loginIntoApplication("valdemarius000007@gmail.com",
