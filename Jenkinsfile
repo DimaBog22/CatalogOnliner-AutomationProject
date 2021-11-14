@@ -20,7 +20,7 @@ pipeline {
             }
         }
 
-        /* stage('Reports') {
+        stage('Reports') {
             steps {
                 script {
                     allure([
@@ -31,6 +31,6 @@ pipeline {
                         results: [[path: 'target/allure-results']]
                     ])}
                }
-        } */
+        }
     }
 }
