@@ -24,6 +24,8 @@
         <mysqlConnectorJava.version>8.0.26</mysqlConnectorJava.version>
         <selenide.version>5.25.0</selenide.version>
         <suite></suite>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
     <build>
