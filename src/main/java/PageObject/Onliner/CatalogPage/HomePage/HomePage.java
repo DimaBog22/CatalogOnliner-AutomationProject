@@ -18,7 +18,7 @@ public class HomePage extends BasePage {
     private By inputSearch = By.name("query");
     private By goToLoginPageBtn = By.cssSelector(".auth-bar__item.auth-bar__item--text");
     private By userAvatar = By.cssSelector(".b-top-profile__image.js-header-user-avatar");
-    private By userId = By.cssSelector(".profile-header__name");
+    private By userId = By.cssSelector(".b-top-profile__name");
 
     public HomePage openPage() {
 
