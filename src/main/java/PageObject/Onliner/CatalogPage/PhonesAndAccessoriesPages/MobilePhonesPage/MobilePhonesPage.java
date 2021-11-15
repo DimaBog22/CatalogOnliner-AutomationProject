@@ -3,6 +3,7 @@ package PageObject.Onliner.CatalogPage.PhonesAndAccessoriesPages.MobilePhonesPag
 import PageObject.Onliner.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Actions;
+import static driver.DriverCreation.getDriver;
 
 public class MobilePhonesPage extends BasePage {
 
@@ -27,8 +28,8 @@ public class MobilePhonesPage extends BasePage {
 
     public MobilePhonesPage clickOnAppleCheckBox() {
 
-        Actions act =  new Actions(driver);
-        act.moveToElement(driver.
+        Actions act =  new Actions(getDriver());
+        act.moveToElement(getDriver().
                 findElement(By.xpath("//*[@id=\"schema-filter\"]/div[3]/div[6]/div[2]/ul/li[1]/label"))).
                 click().perform();
         return this;
@@ -38,8 +39,8 @@ public class MobilePhonesPage extends BasePage {
 
     public MobilePhonesPage clickOnIphone11GB64() {
 
-        Actions act =  new Actions(driver);
-        act.moveToElement(driver.
+        Actions act =  new Actions(getDriver());
+        act.moveToElement(getDriver().
                 findElement(By.cssSelector("a[href='https://catalog.onliner.by/mobile/apple/iphone1164b']>span[data-bind='html: product.extended_name || product.full_name']"))).
                 click().perform();
         return this;
