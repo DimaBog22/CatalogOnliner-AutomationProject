@@ -27,8 +27,12 @@ public class MobilePhonesPage extends BasePage {
 
     public MobilePhonesPage clickOnAppleCheckBox() {
 
-        click(appleCheckBox);
+        Actions act =  new Actions(driver);
+        act.moveToElement(driver.
+                findElement(By.xpath("//*[@id=\"schema-filter\"]/div[3]/div[6]/div[2]/ul/li[1]/label"))).
+                click().perform();
         return this;
+
 
     }
 
