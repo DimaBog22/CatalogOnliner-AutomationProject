@@ -40,7 +40,7 @@ public class AddAndRemoveItemViaMenusTests extends BaseTest {
                         .clickOnAppleCheckBox();
 
         Thread.sleep(5000);
-        
+
         mobilePhonesPage.clickOnIphone11GB64();
 
         iphone11GB64.verifyIphone11GB64Page()

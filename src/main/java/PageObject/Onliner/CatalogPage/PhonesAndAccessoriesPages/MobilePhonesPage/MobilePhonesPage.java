@@ -2,6 +2,7 @@ package PageObject.Onliner.CatalogPage.PhonesAndAccessoriesPages.MobilePhonesPag
 
 import PageObject.Onliner.BasePage;
 import org.openqa.selenium.By;
+import org.openqa.selenium.interactions.Actions;
 
 public class MobilePhonesPage extends BasePage {
 
@@ -33,7 +34,10 @@ public class MobilePhonesPage extends BasePage {
 
     public MobilePhonesPage clickOnIphone11GB64() {
 
-        click(iphone11GB64);
+        Actions act =  new Actions(driver);
+        act.moveToElement(driver.
+                findElement(By.cssSelector("a[href='https://catalog.onliner.by/mobile/apple/iphone1164b']>span[data-bind='html: product.extended_name || product.full_name']"))).
+                click().perform();
         return this;
 
     }
