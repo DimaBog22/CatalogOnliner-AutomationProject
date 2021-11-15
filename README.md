@@ -19,10 +19,10 @@ git clone https://github.com/DimaBog22/CatalogOnliner-AutomationProject.git
 * Checkout to the main branch
 * Run tests with maven:
   ```
-  mvn clean test -Dsuite="src/test/resources/addOrRemoveTests.xml
-  mvn clean test -Dsuite="src/test/resources/addOrRemoveTests2.xml
-  mvn clean test -Dsuite="src/test/resources/apiTests.xml
-  mvn clean test -Dsuite="src/test/resources/basicTests.xml
+  mvn clean test -Dsuite="src/main/resources/addOrRemoveTests.xml
+  mvn clean test -Dsuite="src/main/resources/addOrRemoveTests2.xml
+  mvn clean test -Dsuite="src/main/resources/apiTests.xml
+  mvn clean test -Dsuite="src/main/resources/basicTests.xml
   ```
 Driver implementation
 -----------------------------------
