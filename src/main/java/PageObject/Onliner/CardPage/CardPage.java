@@ -18,7 +18,7 @@ public class CardPage extends BasePage {
     private By title = By.className("cart-form__title");
     private By itemName = By.xpath("//a[contains(text(),'Смартфон Apple iPhone 11 64GB (черный)')]");
     private By orderBtn = By.cssSelector(".cart-form__control>a.button-style_primary");
-    
+
     public CardPage verifyCardPage() {
 
         isDisplayed(title, itemName, orderBtn);
