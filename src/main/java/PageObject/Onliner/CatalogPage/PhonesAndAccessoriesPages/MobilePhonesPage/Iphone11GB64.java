@@ -2,11 +2,13 @@ package PageObject.Onliner.CatalogPage.PhonesAndAccessoriesPages.MobilePhonesPag
 
 import PageObject.Onliner.BasePage;
 import org.openqa.selenium.By;
+import org.openqa.selenium.interactions.Actions;
+
+import static driver.DriverCreation.getDriver;
 
 public class Iphone11GB64 extends BasePage {
 
     private By title = By.cssSelector(".catalog-masthead__title");
-    private By addToTheCardBtn = By.xpath("//a[@data-shop-id='256' and contains(text(),'В корзину')]");
 
     public Iphone11GB64 verifyIphone11GB64Page() {
 
@@ -24,7 +26,10 @@ public class Iphone11GB64 extends BasePage {
 
     public Iphone11GB64 addToTheCard() {
 
-        click(addToTheCardBtn);
+        Actions act =  new Actions(getDriver());
+        act.moveToElement(getDriver().
+                findElement(By.xpath("//a[@data-shop-id='936' and contains(text(),'В корзину')]"))).
+                click().perform();
         return this;
 
     }

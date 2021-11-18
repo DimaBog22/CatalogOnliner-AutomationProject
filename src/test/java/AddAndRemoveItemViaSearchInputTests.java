@@ -36,8 +36,7 @@ public class AddAndRemoveItemViaSearchInputTests extends BaseTest {
                 .goToTheCard();
 
         cardPage.verifyCardPage()
-                .checkNameOfItem()
-                .checkShopName();
+                .checkNameOfItem();
 
     }
     @Test(priority = 2)
@@ -49,7 +48,6 @@ public class AddAndRemoveItemViaSearchInputTests extends BaseTest {
 
         cardPage.verifyCardPage()
                 .checkNameOfItem()
-                .checkShopName()
                 .removeItemFromCard();
 
     }

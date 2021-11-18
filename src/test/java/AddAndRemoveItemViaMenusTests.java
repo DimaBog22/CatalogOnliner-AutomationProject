@@ -51,8 +51,7 @@ public class AddAndRemoveItemViaMenusTests extends BaseTest {
               .goToTheCard();
 
         cardPage.verifyCardPage()
-                .checkNameOfItem()
-                .checkShopName();
+                .checkNameOfItem();
 
     }
     @Test(priority = 2)
@@ -64,7 +63,6 @@ public class AddAndRemoveItemViaMenusTests extends BaseTest {
 
         cardPage.verifyCardPage()
                 .checkNameOfItem()
-                .checkShopName()
                 .removeItemFromCard();
 
     }
